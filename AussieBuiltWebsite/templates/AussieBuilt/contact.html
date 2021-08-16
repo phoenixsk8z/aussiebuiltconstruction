@@ -1,0 +1,36 @@
+{% extends "AussieBuilt/layout.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'AussieBuilt/contact.css' %}">
+{% endblock %}
+
+
+{% block script %}
+<script src="{% static 'AussieBuilt/javascript/copyToClipboard.js' %}" defer></script>
+{% endblock %}
+
+{% block body %}
+<div id="contact-container">
+    <!-- <h1 id="Contact-Header">CONTACT US</h1> -->
+    <p id="contact-text">We would love to get in touch with you! If you have any questions or would like to schedule a free estimate, please feel free to contact us!</p>
+    
+    <h1 id="contact-page-email" class="contact-info" onclick="copyToClipboard('#contact-page-email')">
+        Edward@aussiebuiltconstruction.com</h1>
+    <h1 id="contact-page-phone" class="contact-info" onclick="copyToClipboard('#contact-page-phone')">
+        757-268-1706</h1>
+
+    <span id="contact-break"></span>
+</div>
+<div id="contact-form-container">
+    <form action="{% url 'contact' %}" method="POST" id="contact-form">
+        {% csrf_token %}
+        <input type="text" name="name" class="contact-input contact-form-items" placeholder="Name" autocomplete="off" required>
+        <input type="text" name="email" class="contact-input contact-form-items" placeholder="Email" autocomplete="off" required>
+        <input type="text" name="subject" class="contact-input contact-form-items" placeholder="Subject" autocomplete="off" required>
+        <input type="text" name="phone" class="contact-input contact-form-items" placeholder="Phone #" autocomplete="off">
+        <textarea type="text" name="message" id="contact-message" placeholder="Message" class="contact-form-items" autocomplete="off" required></textarea>
+        <button type="submit" id="contact-submit" class="contact-form-items">Submit</button>
+    </form>
+</div>
+{% endblock %}

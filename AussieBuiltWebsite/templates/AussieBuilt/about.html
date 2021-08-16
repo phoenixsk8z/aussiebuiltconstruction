@@ -1,0 +1,41 @@
+{% extends "AussieBuilt/layout.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'AussieBuilt/about.css' %}">
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'AussieBuilt/javascript/aboutPageMobile.js' %}" defer></script>
+{% endblock %}
+
+{% block body %}
+<div id="about-div">
+
+    <div class="about-sections">
+
+        <img class="about-section-image" src="{% static 'AussieBuilt/imgs/aboutpage/1.jpg' %}">
+        <p class="about-section-text">Born and raised in Australia, Aussie Built Construction prides
+        itself in honoring it's heritage in its name. The logo is an iconic Australian road sign. </p>
+
+    </div>
+    
+    <div class="about-sections">
+
+        <p class="about-section-text">Established in 2011 Aussie Built Construction partners with hand 
+            selected sub contractors for specialities in Plumbing, Electrical, HVAC and drywall to 
+            complete your projects with quality professional work.  </p>
+        <img class="about-section-image" src="{% static 'AussieBuilt/imgs/aboutpage/2.jpg' %}">
+
+    </div>
+
+    <div class="about-sections">
+
+        <img class="about-section-image" src="{% static 'AussieBuilt/imgs/aboutpage/3.jpg' %}">
+        <p class="about-section-text">Ed Richards moved to the USA from Australia in 2003 with his wife and son.
+            Together they have 4 beautiful children, 3 cats and 2 dogs. </p>
+
+    </div>
+
+</div>
+{% endblock %}

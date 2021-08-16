@@ -1,0 +1,147 @@
+{% extends "AussieBuilt/layout.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'AussieBuilt/slideshow.css' %}">
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'AussieBuilt/javascript/slideshow.js' %}" defer></script>
+{% endblock %}
+
+{% block body %}
+<div id="slideshows-div">
+
+    <div id="slideshow-container">
+        <div class="slideshow">
+
+            <!-- "IMAGE-BORDER" = DEVIDER BETWEEN 2 IMAGES -->
+            <span id="image-border"></span>
+            <img class="slideshow-buttons prev-button" src="{% static 'AussieBuilt/imgs/left-arrow.png' %}" alt="">
+            <img class="slideshow-buttons next-button" src="{% static 'AussieBuilt/imgs/right-arrow.png' %}" alt="">
+
+            <div class="slideshow-imgs-div">
+
+                <!-- LAST 2 IMAGES FROM MAIN IMAGES  (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
+                <img class="slideshow-img0" src="{% static 'AussieBuilt/imgs/bathroom1/4.jpg' %}" alt="">
+                <img class="vertical-image slideshow-img0" src="{% static 'AussieBuilt/imgs/bathroom1/5.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom1/6.jpg' %}" alt="">
+
+                <!-- MAIN IMAGES (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
+                <img class="slideshow-img0" src="{% static 'AussieBuilt/imgs/bathroom1/1.jpg' %}" alt="">
+                <img class="vertical-image slideshow-img0" src="{% static 'AussieBuilt/imgs/bathroom1/2.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom1/3.jpg' %}" alt="">
+                <img class="slideshow-img0" src="{% static 'AussieBuilt/imgs/bathroom1/4.jpg' %}" alt="">
+                <img class="vertical-image slideshow-img0" src="{% static 'AussieBuilt/imgs/bathroom1/5.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom1/6.jpg' %}" alt="">
+
+                <!-- FIRST 2 IMAGES FROM MAIN IMAGES (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
+                <img class="slideshow-img0" src="{% static 'AussieBuilt/imgs/bathroom1/1.jpg' %}" alt="">
+                <img class="vertical-image slideshow-img0" src="{% static 'AussieBuilt/imgs/bathroom1/2.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom1/3.jpg' %}" alt="">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="slideshow-container">
+        <div class="slideshow">
+
+            <!-- "IMAGE-BORDER" = DEVIDER BETWEEN 2 IMAGES -->
+            <span id="image-border"></span>
+            <img class="slideshow-buttons prev-button" src="{% static 'AussieBuilt/imgs/left-arrow.png' %}" alt="">
+            <img class="slideshow-buttons next-button" src="{% static 'AussieBuilt/imgs/right-arrow.png' %}" alt="">
+
+            <div class="slideshow-imgs-div">
+
+                <!-- LAST 2 IMAGES FROM MAIN IMAGES  (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
+                <img class="vertical-image slideshow-img1" src="{% static 'AussieBuilt/imgs/bathroom2/3.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom2/4.jpg' %}" alt="">
+                <img class="slideshow-img1" src="{% static 'AussieBuilt/imgs/bathroom2/5.jpg' %}" alt="">
+
+                <!-- MAIN IMAGES (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
+                <img class="slideshow-img1" src="{% static 'AussieBuilt/imgs/bathroom2/1.jpg' %}" alt="">
+                <img class="slideshow-img1" src="{% static 'AussieBuilt/imgs/bathroom2/2.jpg' %}" alt="">
+                <img class="vertical-image slideshow-img1" src="{% static 'AussieBuilt/imgs/bathroom2/3.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom2/4.jpg' %}" alt="">
+                <img class="slideshow-img1" src="{% static 'AussieBuilt/imgs/bathroom2/5.jpg' %}" alt="">
+
+                <!-- FIRST 2 IMAGES FROM MAIN IMAGES (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
+                <img class="slideshow-img1" src="{% static 'AussieBuilt/imgs/bathroom2/1.jpg' %}" alt="">
+                <img class="slideshow-img1" src="{% static 'AussieBuilt/imgs/bathroom2/2.jpg' %}" alt="">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="slideshow-container">
+        <div class="slideshow">
+
+            <!-- "IMAGE-BORDER" = DEVIDER BETWEEN 2 IMAGES -->
+            <span id="image-border"></span>
+            <img class="slideshow-buttons prev-button" src="{% static 'AussieBuilt/imgs/left-arrow.png' %}" alt="">
+            <img class="slideshow-buttons next-button" src="{% static 'AussieBuilt/imgs/right-arrow.png' %}" alt="">
+
+            <div class="slideshow-imgs-div">
+
+                <!-- LAST 2 IMAGES FROM MAIN IMAGES  (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
+                <img class="vertical-image slideshow-img2" src="{% static 'AussieBuilt/imgs/bathroom3/3.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom3/4.jpg' %}" alt="">
+                <img class="slideshow-img2" src="{% static 'AussieBuilt/imgs/bathroom3/5.jpg' %}" alt="">
+
+                <!-- MAIN IMAGES (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
+                <img class="slideshow-img2" src="{% static 'AussieBuilt/imgs/bathroom3/1.jpg' %}" alt="">
+                <img class="slideshow-img2" src="{% static 'AussieBuilt/imgs/bathroom3/2.jpg' %}" alt="">
+                <img class="vertical-image slideshow-img2" src="{% static 'AussieBuilt/imgs/bathroom3/3.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom3/4.jpg' %}" alt="">
+                <img class="slideshow-img2" src="{% static 'AussieBuilt/imgs/bathroom3/5.jpg' %}" alt="">
+
+                <!-- FIRST 2 IMAGES FROM MAIN IMAGES (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
+                <img class="slideshow-img2" src="{% static 'AussieBuilt/imgs/bathroom3/1.jpg' %}" alt="">
+                <img class="slideshow-img2" src="{% static 'AussieBuilt/imgs/bathroom3/2.jpg' %}" alt="">
+
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div id="slideshow-container">
+        <div class="slideshow">
+
+            <!-- "IMAGE-BORDER" = DEVIDER BETWEEN 2 IMAGES -->
+            <span id="image-border"></span>
+            <img class="slideshow-buttons prev-button" src="{% static 'AussieBuilt/imgs/left-arrow.png' %}" alt="">
+            <img class="slideshow-buttons next-button" src="{% static 'AussieBuilt/imgs/right-arrow.png' %}" alt="">
+
+            <div class="slideshow-imgs-div">
+
+                <!-- LAST 2 IMAGES FROM MAIN IMAGES  (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
+                <img class="vertical-image slideshow-img3" src="{% static 'AussieBuilt/imgs/bathroom5/4.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom5/5.jpg' %}" alt="">
+                <img class="vertical-image slideshow-img3" src="{% static 'AussieBuilt/imgs/bathroom5/6.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom5/7.jpg' %}" alt="">
+
+                <!-- MAIN IMAGES (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
+                <img class="slideshow-img3" src="{% static 'AussieBuilt/imgs/bathroom5/1.jpg' %}" alt="">
+                <img class="vertical-image slideshow-img3" src="{% static 'AussieBuilt/imgs/bathroom5/2.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom5/3.jpg' %}" alt="">
+                <img class="vertical-image slideshow-img3" src="{% static 'AussieBuilt/imgs/bathroom5/4.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom5/5.jpg' %}" alt="">
+                <img class="vertical-image slideshow-img3" src="{% static 'AussieBuilt/imgs/bathroom5/6.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom5/7.jpg' %}" alt="">
+
+                <!-- FIRST 2 IMAGES FROM MAIN IMAGES (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
+                <img class="slideshow-img3" src="{% static 'AussieBuilt/imgs/bathroom5/1.jpg' %}" alt="">
+                <img class="vertical-image slideshow-img3" src="{% static 'AussieBuilt/imgs/bathroom5/2.jpg' %}" alt="">
+                <img class="vertical-image" src="{% static 'AussieBuilt/imgs/bathroom5/3.jpg' %}" alt="">
+                
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}
