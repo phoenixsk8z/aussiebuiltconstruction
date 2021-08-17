@@ -30,7 +30,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     '127.0.0.1', 
     'aussiebuiltconstruction.com',
-    'aussiebuiltconstruction.herokuapp.com'
+    'www.aussiebuiltconstruction.com',
+    'aussiebuiltconstruction.herokuapp.com',
 ]
 
 # EMAIL SENDING SETTINGS | https://mailtrap.io/blog/django-send-email/
