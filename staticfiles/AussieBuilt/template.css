@@ -129,8 +129,8 @@ main {
 /* FOOTER CSS */
 #nav-footer {
     display: grid;
-    grid-template-rows: auto 2px 72px;
-    height: 336px;
+    grid-template-rows: auto 2px 78px;
+    height: 342px;
     background-color: black;
     width: 100%;
 }
@@ -194,6 +194,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 36px);
+    row-gap: 6px;
     justify-items: center;
     align-items: center;
     padding: 0 24px;
@@ -201,8 +202,10 @@ main {
 
 #email-phone-div {
     display: grid;
-    grid-template-columns: 331px 140px;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
     justify-items: center;
+    justify-content: center;
 }
 
 a {
@@ -211,7 +214,7 @@ a {
 
 #footer-email, #footer-phone {
     color: white;
-    font-size: 16px;
+    font-size: 22px;
     font-family: Overpass;
     /* SET HOVER CURSOR AS CLIPBOARD AND CHANGE X AND Y TO BE HALF OF THE IMAGE 
     SIZE SO THE CLIPBOARD ICON IS PLACED IN THE MIDDLE + SET FALL BACK OF POINTER */
@@ -220,9 +223,8 @@ a {
 
 #footer-copyright {
     color: white;
-    font-size: 14px; 
     overflow: wrap;
-    font-size: 10px!important;
+    font-size: 16px!important;
     justify-self: center;
     font-family: Overpass;
 }
@@ -323,7 +325,7 @@ a {
     /* MAKE EMAIL AND PHONE NUMBER 2 LINES | MAKE COPYRIGHT 2 LINES */
     #nav-footer {
         grid-template-rows: auto 2px 128px;
-        height: 392px;
+        height: 398px;
     }
     
     #nav-footer-privacy-copyright {

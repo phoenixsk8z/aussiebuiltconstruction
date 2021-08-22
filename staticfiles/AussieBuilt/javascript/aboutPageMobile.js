@@ -16,7 +16,7 @@ function aboutSectionOrder() {
         [TEXT]
         [IMAGE]  */
         
-    if(websiteWidth < 651) {
+    if(websiteWidth < 846) {
         for (var count = 1; count < aboutSections.length; count = count + 2) {
             aboutText[count].style.order = 2;
             aboutImage[count].style.order = 1;

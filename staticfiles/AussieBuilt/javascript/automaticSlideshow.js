@@ -17,7 +17,7 @@ function translateSlideshow(slideshow, counter, transitionBoolean) {
 
   /* WHEN THE WEBSITE IS BELOW 1050PX THE IMAGES TAKE UP 100% OF THE CONTAINER 
   SO WE WANT TO TRANSLATE THE WHOLE IMAGE */
-  if(websiteWidth < 850) {
+  if(websiteWidth < 970) {
     translateX = `translateX(-${counter * 100}%)`
     transitionTime = 2.2
   } 

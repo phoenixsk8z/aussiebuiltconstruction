@@ -38,6 +38,7 @@
     SIZE SO THE CLIPBOARD ICON IS PLACED IN THE MIDDLE + SET FALL BACK OF POINTER */
     cursor: url(clipboard-black.png) 16 16, pointer;
     font-family: Overpass;
+    white-space: nowrap;
 }
 
 #contact-break {
@@ -49,7 +50,7 @@
 #contact-form {
     display: grid;
     grid-template-columns: 1fr;
-    max-width: 680px;
+    max-width: 980px;
     width: 90%;
     margin: 40px auto 10px;
     justify-content: space-evenly;
@@ -62,6 +63,7 @@
 
 .contact-input {
     height: 46px;
+    width: auto;
     font-size: 30px;
     padding: 0 8px;
     font-family: Overpass;
@@ -90,7 +92,7 @@
 
 .contact-form-items {
     width: 100%;
-    max-width: 650px;
+    max-width: 950px;
     justify-self: center;
     border: 2px solid white;
     border-radius: 6px;
@@ -140,23 +142,5 @@ select:-webkit-autofill:focus {
 @media (max-width: 700px) {
     .contact-info {
         font-size: 24px;
-    }
-}
-
-@media (max-width: 600px) {
-    .contact-info {
-        font-size: 22px;
-    }
-}
-
-@media (max-width: 500px) {
-    .contact-info {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 400px) {
-    .contact-info {
-        font-size: 16px;
     }
 }
