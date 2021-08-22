@@ -1,1 +1,1 @@
-web: gunicorn AussieBuilt.wsgi --settings=AussieBuilt.settings.local --log-file -
+web: gunicorn AussieBuilt.wsgi --log-file -
