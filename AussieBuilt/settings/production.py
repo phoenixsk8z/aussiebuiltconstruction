@@ -16,6 +16,12 @@ ALLOWED_HOSTS = [
 CSRF_COOKIE_SECURE = True
 
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATIC_URL = '/static/'
+
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # HTTPS SETTINGS 
 SESSION_COOKIE_SECURE = True
 CSFR_COOKIE_SECURE = True
@@ -25,8 +31,3 @@ SECURE_SSL_REDIRECT = True
 SECURE_HSTS_SECONDS = 3153600     # ~1 YEAR
 SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
