@@ -15,6 +15,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'AussieBuilt.settings.production'
 
 application = get_wsgi_application()
 
+# lol
 """ 
 from whitenoise import WhiteNoise
 application = WhiteNoise(get_wsgi_application()) 
