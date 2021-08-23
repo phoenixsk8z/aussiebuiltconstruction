@@ -15,5 +15,3 @@ from whitenoise import WhiteNoise
 os.environ['DJANGO_SETTINGS_MODULE'] = 'AussieBuilt.settings.production'
 
 application = get_wsgi_application()
-
-application = WhiteNoise(get_wsgi_application()) 
