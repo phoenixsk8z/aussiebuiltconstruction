@@ -10,12 +10,10 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
+from whitenoise import WhiteNoise
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'AussieBuilt.settings.production'
 
 application = get_wsgi_application()
 
-""" 
-from whitenoise import WhiteNoise
 application = WhiteNoise(get_wsgi_application()) 
-"""
