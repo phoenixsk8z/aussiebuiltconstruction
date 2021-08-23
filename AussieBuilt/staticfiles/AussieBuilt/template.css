@@ -6,6 +6,10 @@
     font-family: Overpass;
 }
 
+html {
+    background-color: black;
+}
+
 #page-div {
     display: flex;
     flex-direction: column;
@@ -310,6 +314,13 @@ a {
     /* AUSSIE BUILT CONSTRUCTION GETS SMALLER */
     #nav-header {
         font-size: 22px;
+        display: block;
+        width: 238px;
+        white-space: normal;
+        line-height: 26px; /* fallback */
+        max-height: 48px;   /* Number Of Lines Multiplied By Line Height*/
+        align-items: center;
+        text-align: center;
     }
 
     .toggle-menu-button {
@@ -324,12 +335,12 @@ a {
     
     /* MAKE EMAIL AND PHONE NUMBER 2 LINES | MAKE COPYRIGHT 2 LINES */
     #nav-footer {
-        grid-template-rows: auto 2px 128px;
-        height: 398px;
+        grid-template-rows: auto 2px 138px;
+        height: 402px;
     }
     
     #nav-footer-privacy-copyright {
-        grid-template-rows: 84px 44px;
+        grid-template-rows: 84px 54px;
     }
     
     #email-phone-div {
@@ -339,8 +350,57 @@ a {
         row-gap: 8px;
         align-items: center;
     }
+
     #footer-copyright {
         width: 340px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 440px) {
+  
+    #nav-footer {
+        height: 410px;
+    }
+    
+    #nav-footer-main {
+        grid-template-rows: 68px 2px 200px;
+    }
+    
+    #footer-info-header {
+        line-height: 28px;
+        height: 52px;
+        white-space: normal;
+        max-width: 250px;
+        text-align: center;
+    }
+    
+
+    #email-phone-div {
+        padding-top: 4px;
+        grid-template-columns: 100%;
+        grid-template-rows: 44px 28px;
+        row-gap: 8px;
+        align-items: center;
+    }
+
+    #footer-email {
+        font-size: 20px;
+        height: 48px;
+        line-height: 22px;
+        max-width: 70%;
+        white-space: wrap;
+        word-wrap: break-word;
+    }
+    
+    #footer-phone {
+        font-size: 20px;
+    }
+
+    #footer-copyright {
+        font-size: 14px;
+        width: 80%;
         text-align: center;
     }
 
