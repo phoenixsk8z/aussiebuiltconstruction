@@ -230,7 +230,7 @@ a {
 }
 
 /* UNDER 1420PX CSS FOR NAV BAR */
-@media (max-width: 1420px) {
+@media screen and (max-width: 1420px) {
     .toggle-menu-button {
         display: flex;
     }
@@ -300,13 +300,13 @@ a {
 
 
 /* AUSSIE BUILT CONSTRUCTION GETS SMALLER */
-@media (max-width: 680px) {
+@media screen and (max-width: 680px) {
     #nav-header {
         font-size: 26px;
     }
 }
 
-@media (max-width: 560px) {
+@media screen and (max-width: 560px) {
     /* AUSSIE BUILT CONSTRUCTION GETS SMALLER */
     #nav-header {
         font-size: 22px;

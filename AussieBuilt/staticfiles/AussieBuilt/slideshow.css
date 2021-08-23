@@ -63,7 +63,7 @@
 }
 
 
-@media (max-width: 1050px) {
+@media screen and (max-width: 1050px) {
     .slideshow-imgs-div > img {
         width: 100%;
         border-left: none;

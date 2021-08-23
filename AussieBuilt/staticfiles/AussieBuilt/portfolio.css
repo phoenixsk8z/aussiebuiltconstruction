@@ -43,13 +43,13 @@
     padding: 0 10px;
 }
 
-@media (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
     #image-container {
         grid-template-columns: auto;
     }
 }
 
-@media (max-width: 680px) {
+@media screen and (max-width: 680px) {
     .main-image-text {
         font-size: 36px;
         height: 60px;
