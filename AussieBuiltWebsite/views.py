@@ -12,7 +12,7 @@ def contact(request):
         subject = request.POST["subject"]
         phone = request.POST["phone"]
         message = request.POST["message"]
-        me = settings.EMAIL_HOST_USER
+        me = 'aussiebuiltemailsender@gmail.com'
         body = f"""
         Name: {name} 
         Phone #: {phone} 
