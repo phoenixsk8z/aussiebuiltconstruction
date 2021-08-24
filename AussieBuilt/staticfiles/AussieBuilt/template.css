@@ -228,7 +228,7 @@ a {
 #footer-copyright {
     color: white;
     overflow: wrap;
-    font-size: 16px!important;
+    font-size: 16px;
     justify-self: center;
     font-family: Overpass;
 }
@@ -375,12 +375,16 @@ a {
         max-width: 250px;
         text-align: center;
     }
+
+    #nav-footer-privacy-copyright {
+        padding: 0 10px;
+    }
     
 
     #email-phone-div {
         padding-top: 4px;
         grid-template-columns: 100%;
-        grid-template-rows: 44px 28px;
+        grid-template-rows: 50px 28px;
         row-gap: 8px;
         align-items: center;
     }
@@ -389,9 +393,11 @@ a {
         font-size: 20px;
         height: 48px;
         line-height: 22px;
+        padding-top: 6px;
         max-width: 70%;
-        white-space: wrap;
+        white-space: normal;
         word-wrap: break-word;
+        text-align: center;
     }
     
     #footer-phone {
@@ -399,8 +405,8 @@ a {
     }
 
     #footer-copyright {
-        font-size: 14px;
-        width: 80%;
+        font-size: 12px;
+        width: 85%;
         text-align: center;
     }
 

@@ -195,3 +195,24 @@
         display: block;
     }
 }
+
+@media screen and (max-width: 500px) {
+
+    #home-image-text-div {
+        column-gap: 4px;
+        padding: 5px 8px;
+    }
+
+    #home-image-header {
+        font-size: calc(10px + 3.3vw);
+        text-align: center;
+    }
+
+    #home-image-header-line-break {
+        display: block;
+    }
+
+    #home-image-logo {
+        width: calc(40px + 5vw);
+    }
+}
