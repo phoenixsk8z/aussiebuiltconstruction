@@ -10,7 +10,7 @@
 .image-main {
     max-width: 100%;
     border-radius: 6px;
-    border: 3px solid #190061;
+    border: 3px solid #3500D3;
 }
 
 .main-images {
@@ -34,7 +34,7 @@
     font-family: Overpass;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 12px;
-    border: 2px solid #190061;
+    border: 2px solid #3500D3;
     text-decoration: none;
     color: white;
     white-space: nowrap;

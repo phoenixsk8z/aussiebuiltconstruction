@@ -184,7 +184,7 @@ main {
 
 #footer-bar1, #footer-bar2 {
     width: 100%;
-    background-color: #190061;
+    background-color: #3500D3;
     height: 2px;
 }
 
@@ -217,6 +217,8 @@ main {
     grid-template-columns: auto auto;
     column-gap: 20px;
     justify-items: center;
+    align-items: center;
+    align-content: center;
     justify-content: center;
 }
 
@@ -231,6 +233,8 @@ a {
     /* SET HOVER CURSOR AS CLIPBOARD AND CHANGE X AND Y TO BE HALF OF THE IMAGE 
     SIZE SO THE CLIPBOARD ICON IS PLACED IN THE MIDDLE + SET FALL BACK OF POINTER */
     cursor: url(clipboard-white.png) 16 16, pointer;
+    align-self: center;
+    align-content: center;
 }
 
 #footer-copyright {
@@ -335,6 +339,10 @@ a {
         height: 74px;
     }
 
+    #nav-header {
+        padding-left: 20px;
+    }
+
     .menu-bar {
         width: 42px;
     }
@@ -346,13 +354,13 @@ a {
     }
     
     #nav-footer-privacy-copyright {
-        grid-template-rows: 68px 30px;
+        grid-template-rows: 68px 20px;
     }
     
     #email-phone-div {
         padding-top: 4px;
         grid-template-columns: 100%;
-        grid-template-rows: repeat(2, 26px);
+        grid-template-rows: repeat(2, 20px);
         row-gap: 8px;
         align-items: center;
     }
@@ -365,11 +373,18 @@ a {
 }
 
 @media screen and (max-width: 440px) {
+
+    #nav-footer-main {
+        grid-template-rows: 68px 2px;
+    }
     
     #footer-info-header {
+        display: grid;
         line-height: 28px;
-        height: 52px;
+        height: 68px;
+        justify-self: center;
         white-space: normal;
+        align-content: center;
         max-width: 70%;
         text-align: center;
     }
