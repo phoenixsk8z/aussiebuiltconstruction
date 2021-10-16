@@ -2,102 +2,122 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aussie Built Construction Inc | {% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static '/AussieBuilt/template.css' %}">
-    {% block css %}
-    {% endblock %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="{% static '/AussieBuilt/javascript/dropdownMenu.js' %}" defer></script>
-    <script src="{% static '/AussieBuilt/javascript/copyToClipboard.js' %}" defer></script>
+  {% block meta %}
+  {% endblock %}
 
-    {% block script %}
-    {% endblock %}
+  <title>Aussie Built Construction Inc | {% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static '/AussieBuilt/template.css' %}">
+  
+  {% block css %}
+  {% endblock %}
+
+  <script src="{% static '/AussieBuilt/javascript/dropdownMenu.js' %}" defer></script>
+  <script src="{% static '/AussieBuilt/javascript/copyToClipboard.js' %}" defer></script>
+  <script src="{% static 'AussieBuilt/javascript/autoUnderLine.js' %}" defer></script>
+
+  {% block script %}
+  {% endblock %}
 </head>
+
 <body>
-    <div id="page-div">
+  <div id="page-div">
 
-        <header>
-            <div id="nav-bar">
-                
-                <h1 id="nav-header">AUSSIE BUILT CONSTRUCTION INC</h1>
-    
-                <div class="toggle-menu-button">
-                    <span class="menu-bar menu-bar-top menu-bar-small"></span>
-                    <span class="menu-bar menu-bar-middle"></span>
-                    <span class="menu-bar menu-bar-bottom menu-bar-small"></span>
-                </div>
-    
-                <div id="nav-links-container">
-                    <span id="nav-sep"></span>
-                    <a class="nav-links" href="{% url 'home' %}">HOME</a>
-                    <a class="nav-links" href="{% url 'portfolio' %}">PORTFOLIO</a>
-                    <a class="nav-links" href="{% url 'about' %}">ABOUT</a>
-                    <a class="nav-links" href="{% url 'contact' %}">CONTACT</a>
-                    
-                    <!-- 
-                        <a class="nav-links" href="{% url 'reviews' %}">REVIEWS</a>
-                    -->
-                    <span id="nav-sep"></span>
-                </div>
-    
-            </div>
-        </header>
-    
-        <main>
-            {% block body %}
-                
-            {% endblock %}
-        </main>
-    
-        
+    <header>
+      <div id="nav-bar">
+          
+        <a id="nav-logo-link" href="{% url 'home' %}">
+          <img id="nav-logo" src="{% static '/AussieBuilt/imgs/home-page-images/aussiebuiltlogo.png' %}">
+        </a>
+
+        <h1 id="nav-header">AUSSIE BUILT CONSTRUCTION INC</h1>
+
+        <div class="toggle-menu-button">
+          <span class="menu-bar menu-bar-top menu-bar-small"></span>
+          <span class="menu-bar menu-bar-middle"></span>
+          <span class="menu-bar menu-bar-bottom menu-bar-small"></span>
+        </div>
+
+        <div id="nav-links-container">
+          <span id="nav-sep"></span>
+          <a class="nav-links" href="{% url 'home' %}">
+            <p class="nav-link-text" id="nav-link-0">HOME</p>  
+          </a>
+          <a class="nav-links" href="{% url 'portfolio' %}">
+            <p class="nav-link-text" id="nav-link-1">PORTFOLIO</p>
+          </a>
+          <a class="nav-links" href="{% url 'about' %}">
+            <p class="nav-link-text" id="nav-link-2">ABOUT</p>
+          </a>
+          <a class="nav-links" href="{% url 'contact' %}">
+            <p class="nav-link-text" id="nav-link-3">CONTACT</p>
+          </a>
+          
+          <!-- 
+            <a class="nav-links" href="{% url 'reviews' %}">REVIEWS</a>
+          -->
+          <span id="nav-sep"></span>
+        </div>
+
+      </div>
+    </header>
+  
+    <main>
+      {% block body %}
+          
+      {% endblock %}
+    </main>
+  
+  </div>
+
+  <footer id="nav-footer">
+    <div id="nav-footer-main">
+
+      <h1 id="footer-info-header">AUSSIE BUILT CONSTRUCTION INC</h1>
+
+      <span id="footer-bar1"></span>
+
+      <!-- 
+        <div id="nav-footer-links">
+          <a class="footer-links" href="{% url 'home' %}">HOME</a>
+          <a class="footer-links" href="{% url 'portfolio' %}">PORTFOLIO</a>
+          <a class="footer-links" href="{% url 'about' %}">ABOUT</a>
+          <a class="footer-links" href="{% url 'contact' %}">CONTACT</a>
+
+
+          <a class="footer-links" href="{% url 'reviews' %}">REVIEWS</a>
+          <a class="footer-links" href="{% url 'privacy' %}">PRIVACY</a>
+        </div>
+      -->
+
     </div>
-    <footer id="nav-footer">
-        <div id="nav-footer-main">
 
-            <h1 id="footer-info-header">AUSSIE BUILT CONSTRUCTION INC</h1>
+    <!-- 
+        <span id="footer-bar2"></span> 
+    -->
 
-            <span id="footer-bar1"></span>
+    <div id="nav-footer-privacy-copyright">
 
-            <!-- 
-                <div id="nav-footer-links">
-                    <a class="footer-links" href="{% url 'home' %}">HOME</a>
-                    <a class="footer-links" href="{% url 'portfolio' %}">PORTFOLIO</a>
-                    <a class="footer-links" href="{% url 'about' %}">ABOUT</a>
-                    <a class="footer-links" href="{% url 'contact' %}">CONTACT</a>
+      <div id="email-phone-div">
+          
+        <h1 id="footer-email" onclick="copyToClipboard('#footer-email')">
+          Edward@aussiebuiltconstruction.com
+        </h1>
 
+        <h1 id="footer-phone" onclick="copyToClipboard('#footer-phone')">
+          757-268-1706
+        </h1>
 
-                        <a class="footer-links" href="{% url 'reviews' %}">REVIEWS</a>
-                        <a class="footer-links" href="{% url 'privacy' %}">PRIVACY</a>
+      </div>
 
+      <h2 id="footer-copyright">Copyright © 2021 AussieBuiltConstruction. All Rights Reserved.</h2>
 
-                </div>
-            -->
+    </div>
 
-        </div>
-
-        <!-- 
-            <span id="footer-bar2"></span> 
-        -->
-
-        <div id="nav-footer-privacy-copyright">
-
-            <div id="email-phone-div">
-                
-                <h1 id="footer-email" onclick="copyToClipboard('#footer-email')">
-                    Edward@aussiebuiltconstruction.com</h1>
-
-                <h1 id="footer-phone" onclick="copyToClipboard('#footer-phone')">
-                    757-268-1706</h1>
-
-            </div>
-
-            <h2 id="footer-copyright">Copyright © 2021 AussieBuiltConstruction. All Rights Reserved.</h2>
-
-        </div>
-
-    </footer>
+  </footer>
     
 </body>
 </html>
