@@ -121,6 +121,7 @@ main {
     grid-template-columns: repeat(4, auto);
     column-gap: 16px;
     max-width: 530px;
+    margin-left: 50px;
     justify-items: center;
     align-items: center;
 }

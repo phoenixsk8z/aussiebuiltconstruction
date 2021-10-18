@@ -19,6 +19,7 @@
     width: 50%;
     height: auto;
     transition: opacity 0.75s ease-in-out;
+    flex-shrink: 0;
 }
 
 /*
