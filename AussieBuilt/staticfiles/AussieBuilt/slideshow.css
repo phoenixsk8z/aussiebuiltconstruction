@@ -87,14 +87,18 @@
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
     #slideshows-div {
         padding: 5px 4%;
+    }
+
+    .slideshow-buttons {
+        font-size: calc(3px + 16vw);
     }
 }
 
 @media screen and (max-width: 300px) {
     #slideshows-div {
-        padding: 5px 3%;
+        padding: 5px calc(2px + 3%);
     }
 }

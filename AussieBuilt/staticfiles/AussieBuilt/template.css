@@ -75,12 +75,13 @@ main {
     transform: rotate(-45deg) translate(10px, -10px);
 }
 
-#nav-header {
-    padding-right: 50px;
+#nav-header-container {
+    display: inline-flex;
+}
+.nav-header {
     font-size: 32px;
     font-weight: 500;
-    height: 74px;
-    line-height: 74px;
+    white-space: pre;
     /* Line Height & Height will center the text when they're the same. 
     ( Line Height / Height Should be the same as the height of the nav bar ) */
 }
@@ -99,7 +100,7 @@ main {
     /* Height = #NAV-LOGO WIDTH - PADDING-LEFT & PADDING-RIGHT */
 }
 
-#nav-header, .nav-links {
+.nav-header, .nav-links {
     font-family: Overpass;
     color: white;
 }
@@ -333,22 +334,23 @@ a {
 
 /* AUSSIE BUILT CONSTRUCTION GETS SMALLER */
 @media screen and (max-width: 720px) {
-    #nav-header {
+    .nav-header {
         font-size: 26px;
     }
 }
 
 @media screen and (max-width: 620px) {
     /* AUSSIE BUILT CONSTRUCTION GETS SMALLER */
-    #nav-header {
-        font-size: 22px;
-        display: block;
-        width: 258px;
-        white-space: normal;
-        line-height: 26px; /* fallback */
-        max-height: 48px;   /* Number Of Lines Multiplied By Line Height*/
-        align-items: center;
+    #nav-header-container {
+        display: table;
+        width: fit-content;
+        align-self: center;
+    }
+
+    .nav-header {
         text-align: center;
+        font-size: 22px;
+        white-space: normal;
     }
 
     .toggle-menu-button {
@@ -451,23 +453,34 @@ a {
         width: 60px;
     }
 
-    #nav-header {
+    #nav-bar {
+        grid-template-rows: 66px;
+    }
+
+    #nav-bar.activeNavBar {
+        grid-template-rows: 66px auto;
+    }
+
+
+    .toggle-menu-button {
+        height: 66px;
+    }
+
+    .nav-header {
         font-size: 18px;
-        width: 221px;
-        line-height: 20px;
-        max-height: 40px;
     }
 
     #nav-logo {
-        width: 56px;
+        width: 58px;
     }
 
     #nav-logo-link {
-        height: 37px;
+        height: 39px; /* HEIGHT = WIDTH OF #NAV-LOGO - PADDING LEFT AND PADDING RIGHT */
     }
 
+
     #nav-bar {
-        grid-template-columns: 56px auto;
+        grid-template-columns: 58px auto;
     }
 }
 
