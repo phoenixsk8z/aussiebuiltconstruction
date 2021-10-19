@@ -2,6 +2,7 @@ const Slideshows = document.getElementsByClassName('slideshow');
 const slideshows = document.getElementsByClassName('slideshow-imgs-div');
 const nextButtons = document.getElementsByClassName('next-button');
 const prevButtons = document.getElementsByClassName('prev-button');
+const transitionTime = 1.45
 
 /* CREATES AN EMPTY ARRAY AND THEN GOES THROUGH 
    A LOOP TO DYNAMICALLY ADD SLIDESHOWS */
@@ -15,7 +16,7 @@ for (var count = 0; count < Slideshows.length; count++) {
   // CREATE SLIDESHOW OBJECT USING [COUNT] TO DYNAMICALLY UPDATE THE VALUES.
   var slideshow = {
     "slideshow": slideshows[count], 
-    "counter": 2, 
+    "counter": 2, // WHEN THE PAGE LOADS THE SLIDESHOW NEEDS TO TRANSLATED 2 IMAGES TO THE RIGHT
     "nextButton": nextButtons[count], 
     "prevButton": prevButtons[count], 
     "slideshowImgs": slideshowImgs
@@ -36,7 +37,7 @@ allSlideshows.forEach(item => {
 
   translateSlideshow(item.slideshow, item.counter, false)
 
-})
+});
 
 
 allSlideshows.forEach(item => {
@@ -50,7 +51,7 @@ allSlideshows.forEach(item => {
         item.counter--;
     }
 
-    translateSlideshow(item.slideshow, item.counter, true)
+    translateSlideshow(item.slideshow, item.counter, true);
   })
 
 })
@@ -64,12 +65,12 @@ allSlideshows.forEach(item => {
     OF FRAME BY TRANSLATING IT TO FAR */
     if(item.counter <= item.slideshowImgs.length - 3) {
         item.counter++;
-    }
+    };
 
     translateSlideshow(item.slideshow, item.counter, true)
-  })
+  });
 
-})
+});
 
 window.addEventListener("resize", function() {
 
@@ -128,7 +129,7 @@ function translateSlideshow(slideshow, counter, transitionBoolean) {
     THEN ADD A TRANSITION SO IMAGES ARE TRANSFORMED SMOOTHLY OTHERWISE 
     WE DON'T WANT A TRANSITION SO SET TRANSITION = NONE */
     if(transitionBoolean) {
-      slideshow.style.transition = "transform 1.45s ease-in-out"
+      slideshow.style.transition = `transform ${transitionTime}s ease-in-out`
     } else {
       slideshow.style.transition = "none"
     }

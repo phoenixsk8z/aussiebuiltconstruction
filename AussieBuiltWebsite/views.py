@@ -1,34 +1,40 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.conf import settings
 from django.urls import reverse
+from AussieBuiltWebsite.forms import EmailForm
 
 def contact(request):
+    form = EmailForm()
     if request.method == "POST":
-        print("METHOD IS POST")
-        name = request.POST["name"]
-        email = request.POST["email"]
-        subject = request.POST["subject"]
-        phone = request.POST["phone"]
-        message = request.POST["message"]
-        me = 'aussiebuiltemailsender@gmail.com'
-        body = f"""
-        Name: {name} 
-        Phone #: {phone} 
-        Email: {email}
-        Body: {message}
-        """
+        form = EmailForm(request.POST)
+        
+        if form.is_valid(): 
+            print("METHOD IS POST")
+            name = request.POST["name"]
+            email = request.POST["email"]
+            subject = request.POST["subject"]
+            phone = request.POST["phone"]
+            message = request.POST["message"]
+            me = 'aussiebuiltemailsender@gmail.com'
+            body = f"""
+            Name: {name} 
+            Phone #: {phone} 
+            Email: {email}
+            Subject: {subject}
+            Body: {message}
+            """
 
-        send_mail(
-            subject, 
-            body, 
-            me,
-            [email, "Edward@aussiebuiltconstruction.com"],
-            fail_silently=False,
-        )
+            send_mail(
+                subject, 
+                body, 
+                me,
+                [email, "Edward@aussiebuiltconstruction.com"],
+                fail_silently=False,
+            )
 
-        return HttpResponseRedirect(reverse("home"))
+        return HttpResponseRedirect(reverse("contact"))
 
     else: 
         return render(request, "AussieBuilt/contact.html")
