@@ -72,7 +72,7 @@ slideshowContainer.addEventListener('transitionend', () => {
 window.addEventListener("resize", function() {
 
   /* UPDATE THE WEBSITE WIDTH SO IT CAN BE USED TO 
-  DETERMINE IF HOW MUCH TO TRANSLATE THE IMAGES */
+  DETERMINE HOW MUCH TO TRANSLATE THE IMAGES */
   websiteWidth = window.innerWidth;
 
   /* WHEN THE WEBSITE IS RESIZED THE IMAGE SIZE WILL CHANGE 

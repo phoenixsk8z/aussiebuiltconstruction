@@ -5,7 +5,7 @@ const prevButtons = document.getElementsByClassName('prev-button');
 const transitionTime = 1.45
 
 /* CREATES AN EMPTY ARRAY AND THEN GOES THROUGH 
-   A LOOP TO DYNAMICALLY ADD SLIDESHOWS */
+  A LOOP TO DYNAMICALLY ADD SLIDESHOWS */
 var allSlideshows = []
 
 for (var count = 0; count < Slideshows.length; count++) {
@@ -32,7 +32,7 @@ for (var count = 0; count < Slideshows.length; count++) {
 let websiteWidth = window.innerWidth;
 
 /* WHEN THE WEBSITE INITIALLY LOADS TRANSLATE ALL THE SLIDESHOWS
-   TO THE CORRECT IMAGE BECAUSE THE FIRST IMAGE IS THE 3RD IMAGE. */
+  TO THE CORRECT IMAGE BECAUSE THE FIRST IMAGE IS THE 3RD IMAGE. */
 allSlideshows.forEach(item => {
 
   translateSlideshow(item.slideshow, item.counter, false)
@@ -48,7 +48,7 @@ allSlideshows.forEach(item => {
     THE PREVBUTTON IS CLICKED SO THE SLIDESHOW DOESN'T 
     GO OUT OF FRAME BY TRANSLATING IT TO FAR */
     if(item.counter >= 2) {
-        item.counter--;
+      item.counter--;
     }
 
     translateSlideshow(item.slideshow, item.counter, true);
@@ -64,7 +64,7 @@ allSlideshows.forEach(item => {
     THE NEXTBUTTON IS CLICKED SO THE SLIDESHOW DOESN'T GO OUT
     OF FRAME BY TRANSLATING IT TO FAR */
     if(item.counter <= item.slideshowImgs.length - 3) {
-        item.counter++;
+      item.counter++;
     };
 
     translateSlideshow(item.slideshow, item.counter, true)
@@ -81,7 +81,7 @@ window.addEventListener("resize", function() {
   /* WHEN THE WEBSITE IS RESIZED THE IMAGE SIZE WILL CHANGE 
   SO THE TRANSLATEX VALUE WILL NEED TO UPDATE ASWELL */
   allSlideshows.forEach(item => {
-      translateSlideshow(item.slideshow, item.counter, false)
+    translateSlideshow(item.slideshow, item.counter, false)
   });
 
 });
@@ -114,25 +114,25 @@ allSlideshows.forEach(item => {
 
 function translateSlideshow(slideshow, counter, transitionBoolean) {
 
-    /* WHEN THE WEBSITE IS BELOW 1050PX THE IMAGES TAKE UP 100% OF THE CONTAINER 
-    SO WE WANT TO TRANSLATE THE WHOLE IMAGE */
-    if(websiteWidth < 1050) {
-      translateX = `translateX(-${counter * 100}%)`
-    } 
-    /* WHEN THE WEBSITE IS ABOVE 1050PX THE IMAGES TAKE UP 50%
-    OF THE CONTAINER SO ONLY MOVE 1 IMAGE AT A TIME */
-    else {
-      translateX = `translateX(-${counter * 50}%)`
-    }
+  /* WHEN THE WEBSITE IS BELOW 1050PX THE IMAGES TAKE UP 100% OF THE CONTAINER 
+  SO WE WANT TO TRANSLATE THE WHOLE IMAGE */
+  if(websiteWidth < 1050) {
+    translateX = `translateX(-${counter * 100}%)`
+  } 
+  /* WHEN THE WEBSITE IS ABOVE 1050PX THE IMAGES TAKE UP 50%
+  OF THE CONTAINER SO ONLY MOVE 1 IMAGE AT A TIME */
+  else {
+    translateX = `translateX(-${counter * 50}%)`
+  }
 
-    /* WHEN TRANSLATE SLIDESHOW IS CALLED IF TRANSITION == TRUE 
-    THEN ADD A TRANSITION SO IMAGES ARE TRANSFORMED SMOOTHLY OTHERWISE 
-    WE DON'T WANT A TRANSITION SO SET TRANSITION = NONE */
-    if(transitionBoolean) {
-      slideshow.style.transition = `transform ${transitionTime}s ease-in-out`
-    } else {
-      slideshow.style.transition = "none"
-    }
-    
-    slideshow.style.transform = translateX
+  /* WHEN TRANSLATE SLIDESHOW IS CALLED IF TRANSITION == TRUE 
+  THEN ADD A TRANSITION SO IMAGES ARE TRANSFORMED SMOOTHLY OTHERWISE 
+  WE DON'T WANT A TRANSITION SO SET TRANSITION = NONE */
+  if(transitionBoolean) {
+    slideshow.style.transition = `transform ${transitionTime}s ease-in-out`
+  } else {
+    slideshow.style.transition = "none"
+  }
+  
+  slideshow.style.transform = translateX
 }
