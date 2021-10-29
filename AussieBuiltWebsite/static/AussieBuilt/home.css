@@ -113,6 +113,33 @@
 
 
 
+#home-page-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    padding: 25px 5% 35px 5%;
+    column-gap: 80px;
+    row-gap: 40px;
+}
+
+.bulletpoint-container {
+    padding-top: 0; 
+}
+
+.bulletpoint-header {
+    color: #3500D3;
+    font-size: 24px;
+    font-family: 'Overpass';
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+
+.bulletpoint-body {
+    color: white;
+    font-size: 16px;
+    font-family: 'Overpass Mono';
+}
+
 
 /*
 @media (max-width: 600px) {
@@ -215,6 +242,11 @@
 
     #home-image-header-line-break {
         display: block;
+    }
+
+
+    #home-page-body {
+        grid-template-columns: 1fr;
     }
 }
 

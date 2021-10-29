@@ -113,6 +113,7 @@ main {
     height: 74px;
     text-decoration: none;
     position: relative;
+    padding: 0 1%;
 }
 
 #nav-links-container {
@@ -124,6 +125,10 @@ main {
     margin-left: 50px;
     justify-items: center;
     align-items: center;
+}
+
+.nav-link-text {
+    padding: auto;
 }
 
 .nav-link-text:after {
