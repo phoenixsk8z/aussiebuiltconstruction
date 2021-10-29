@@ -1,0 +1,34 @@
+{% extends "AussieBuilt/layout.html" %}
+{% load static %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'AussieBuilt/portfolio.css' %}">
+{% endblock %}
+
+{% block body %}
+<div id="image-container">
+
+  <div class="main-images">
+    <a href="{% url 'kitchens' %}"><img class="image-main" src="{% static 'AussieBuilt/imgs/portfolio-image-covers/kitchen-main.jpg' %}" alt=""></a>
+    <a class="main-image-text" href="{% url 'kitchens' %}">KITCHENS</a>
+  </div>
+
+  <div class="main-images">
+    <a href="{% url 'bathrooms' %}"><img class="image-main" src="{% static 'AussieBuilt/imgs/portfolio-image-covers/bathroom-main.jpg' %}" alt=""></a>
+    <a class="main-image-text" href="{% url 'bathrooms' %}">BATHROOMS</a>
+  </div>
+
+  <div class="main-images">
+    <a href="{% url 'decks&stairs' %}"><img class="image-main" src="{% static 'AussieBuilt/imgs/portfolio-image-covers/decks-main.jpg' %}" alt=""></a>
+    <a class="main-image-text" href="{% url 'decks&stairs' %}">DECKS & STAIRS</a>
+  </div>
+
+  <div class="main-images">
+    <a href="{% url 'miscellaneous' %}"><img class="image-main" src="{% static 'AussieBuilt/imgs/portfolio-image-covers/miscellaneous-main.jpg' %}" alt=""></a>
+    <a class="main-image-text" href="{% url 'miscellaneous' %}">HOUSE FLIP</a>
+  </div>
+
+</div>
+{% endblock %}
