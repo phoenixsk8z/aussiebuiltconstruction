@@ -10,16 +10,20 @@
   {% endblock %}
 
   <title>Aussie Built Construction Inc | {% block title %}{% endblock %}</title>
-  <link rel="stylesheet" href="{% static '/AussieBuilt/template.css' %}">
+  <link rel="stylesheet" href="{% static '/AussieBuilt/css/template.css' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static '/AussieBuilt/imgs/template/aussiebuiltlogo.png'%}">
   
   {% block css %}
   {% endblock %}
 
   <script src="{% static '/AussieBuilt/javascript/dropdownMenu.js' %}" defer></script>
   <script src="{% static '/AussieBuilt/javascript/copyToClipboard.js' %}" defer></script>
-  <script src="{% static 'AussieBuilt/javascript/autoUnderLine.js' %}" defer></script>
+  <script src="{% static 'AussieBuilt/javascript/underline.js' %}" defer></script>
 
   {% block script %}
+  {% endblock %}
+
+  {% block head %}
   {% endblock %}
 </head>
 
@@ -47,16 +51,21 @@
         <div id="nav-links-container">
           <span id="nav-sep"></span>
           <a class="nav-links" href="{% url 'home' %}">
-            <p class="nav-link-text" id="nav-link-0">HOME</p>  
+            <p class="nav-link-text">HOME</p>  
           </a>
           <a class="nav-links" href="{% url 'portfolio' %}">
-            <p class="nav-link-text" id="nav-link-1">PORTFOLIO</p>
+            <p class="nav-link-text">PORTFOLIO</p>
           </a>
+          <!--
+            <a class="nav-links" href="{% url 'partners' %}">
+              <p class="nav-link-text">PARTNERS</p>
+            </a>
+          -->
           <a class="nav-links" href="{% url 'about' %}">
-            <p class="nav-link-text" id="nav-link-2">ABOUT</p>
+            <p class="nav-link-text">ABOUT</p>
           </a>
           <a class="nav-links" href="{% url 'contact' %}">
-            <p class="nav-link-text" id="nav-link-3">CONTACT</p>
+            <p class="nav-link-text">CONTACT</p>
           </a>
           
           <!-- 
@@ -106,17 +115,13 @@
 
       <div id="email-phone-div">
           
-        <h1 id="footer-email" onclick="copyToClipboard('#footer-email')">
-          Edward@aussiebuiltconstruction.com
-        </h1>
+        <h1 id="footer-email" onclick="copyToClipboard('#footer-email')">Edward@aussiebuiltconstruction.com</h1>
 
-        <h1 id="footer-phone" onclick="copyToClipboard('#footer-phone')">
-          757-268-1706
-        </h1>
+        <h1 id="footer-phone" onclick="copyToClipboard('#footer-phone')">757-268-1706</h1>
 
       </div>
 
-      <h2 id="footer-copyright">Copyright © 2021 AussieBuiltConstruction. All Rights Reserved.</h2>
+      <h2 id="footer-copyright">Copyright © 2022 AussieBuiltConstruction. All Rights Reserved.</h2>
 
     </div>
 

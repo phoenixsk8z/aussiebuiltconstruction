@@ -4,7 +4,7 @@
 {% block title %}Contact Us{% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'AussieBuilt/contact.css' %}">
+<link rel="stylesheet" href="{% static 'AussieBuilt/css/contact.css' %}">
 {% endblock %}
 
 
@@ -12,15 +12,17 @@
 <script src="{% static 'AussieBuilt/javascript/copyToClipboard.js' %}" defer></script>
 {% endblock %}
 
+{% block haed %}
+<script src='https://www.google.com/recaptcha/api.js' async defer></script>
+{% endblock %}
+
 {% block body %}
 <div id="contact-container">
     <!-- <h1 id="Contact-Header">CONTACT US</h1> -->
     <p id="contact-text">We would love to get in touch with you! If you have any questions or would like to schedule a free estimate, please contact us!</p>
     
-    <h1 id="contact-page-email" class="contact-info" onclick="copyToClipboard('#contact-page-email')">
-        Edward@aussiebuiltconstruction.com</h1>
-    <h1 id="contact-page-phone" class="contact-info" onclick="copyToClipboard('#contact-page-phone')">
-        757-268-1706</h1>
+    <a id="contact-page-email" class="contact-info" onclick="copyToClipboard('#contact-page-email')" href="mailto:Edward@aussiebuiltconstruction.com">Edward@aussiebuiltconstruction.com</a>
+    <a id="contact-page-phone" class="contact-info" onclick="copyToClipboard('#contact-page-phone')" href="tel:757-268-1706">757-268-1706</a>
 
     <span id="contact-break"></span>
 
@@ -28,11 +30,12 @@
 
 <div id="contact-form-container">
     <form action="{% url 'contact' %}" method="POST" id="contact-form">
+    <!--<form action="https://formsubmit.co/phoenixocean193@gmail.com" method="POST" id="contact-form">-->
         {% csrf_token %}
-        <input type="text" name="name" class="contact-input contact-form-items" placeholder="Name" autocomplete="off" required>
-        <input type="text" name="email" class="contact-input contact-form-items" placeholder="Email" autocomplete="off" required>
-        <input type="text" name="subject" class="contact-input contact-form-items" placeholder="Subject" autocomplete="off" required>
-        <input type="text" name="phone" class="contact-input contact-form-items" placeholder="Phone #" autocomplete="off">
+        <input type="text" name="name" id="contact-input-name" class="contact-input contact-form-items" placeholder="Name" autocomplete="off" required>
+        <input type="text" name="email" id="contact-input-email" class="contact-input contact-form-items" placeholder="Email" autocomplete="off" required>
+        <input type="text" name="subject" id="contact-input-subject" class="contact-input contact-form-items" placeholder="Subject" autocomplete="off" required>
+        <input type="text" name="phone" id="contact-input-phone" class="contact-input contact-form-items" placeholder="Phone #" autocomplete="off" required>
         <textarea type="text" name="message" id="contact-message" placeholder="Message" class="contact-form-items" autocomplete="off" required></textarea>
         <button type="submit" id="contact-submit" class="contact-form-items">Submit</button>
     </form>

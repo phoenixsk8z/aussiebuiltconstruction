@@ -8,6 +8,9 @@ const slideshowContainer = document.getElementById('home-slideshow');
 // COUNTER SET TO 2 BECAUSE IT'S USED TO TRANSLATE THE IMAGES & WE WANT TO START ON THE 3RD IMAGE
 let counter = 2 
 
+// DEFAULT GLOBAL INTERVAL VALUE FOR SLIDESHOW IF PAGE IS IN VIEW 
+var intervalValue = 4500
+var animationValue = true
 
 // GET WEBSITE WIDTH AND DEFINE TRANSLATEX 
 let websiteWidth = window.innerWidth;
@@ -82,13 +85,24 @@ window.addEventListener("resize", function() {
 
 });
 
+window.addEventListener('visibilitychange', function() {
+
+  if (window.hidden) {
+    intervalValue = 0
+    animationValue = false
+  } else {
+    intervalValue = 4500
+    animationValue = true
+  }
+
+});
 
 setInterval(function() {
-
+  
   if(counter <= slideshowImages.length - 3) {
     counter++;
   }
 
-  translateSlideshow(slideshowContainer, counter, true)
+  translateSlideshow(slideshowContainer, counter, animationValue)
 
-}, 4500)
+}, intervalValue)
