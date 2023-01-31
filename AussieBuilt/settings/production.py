@@ -14,7 +14,6 @@ ALLOWED_HOSTS = [
 
 # Application definition
 INSTALLED_APPS = [
-    'captcha',
     'AussieBuiltWebsite',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,4 +44,4 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 GOOGLE_RECAPTCHA_SITE_KEY = os.environ.get("GOOGLE_RECAPTCHA_SITE_KEY")
 GOOGLE_RECAPTCHA_SECRET_KEY = os.environ.get('GOOGLE_RECAPTCHA_SECRET_KEY')
-GOOGLE_RECAPTCHA_REQUIRED_SCORE = 0.80
+GOOGLE_RECAPTCHA_REQUIRED_SCORE = 0.45

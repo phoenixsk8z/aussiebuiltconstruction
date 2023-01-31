@@ -246,13 +246,24 @@ a {
     text-decoration: none;
 }
 
-#footer-email, #footer-phone {
+#footer-email {
     color: white;
     font-size: 16px;
     font-family: Overpass;
     /* SET HOVER CURSOR AS CLIPBOARD AND CHANGE X AND Y TO BE HALF OF THE IMAGE 
     SIZE SO THE CLIPBOARD ICON IS PLACED IN THE MIDDLE + SET FALL BACK OF POINTER */
-    cursor: url("../imgs/clipboard-white.png") 16 16, pointer;
+    cursor: url("../imgs/email-icon.png") 16 16, pointer;
+    align-self: center;
+    align-content: center;
+}
+
+#footer-phone {
+    color: white;
+    font-size: 16px;
+    font-family: Overpass;
+    /* SET HOVER CURSOR AS CLIPBOARD AND CHANGE X AND Y TO BE HALF OF THE IMAGE 
+    SIZE SO THE CLIPBOARD ICON IS PLACED IN THE MIDDLE + SET FALL BACK OF POINTER */
+    cursor: url("../imgs/phone-icon.png") 16 16, pointer;
     align-self: center;
     align-content: center;
 }

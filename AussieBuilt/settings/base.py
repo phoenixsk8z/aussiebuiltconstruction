@@ -34,6 +34,7 @@ EMAIL_USE_SSL = False
 
 # Application definition
 INSTALLED_APPS = [
+    'captcha',
     'AussieBuiltWebsite',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'AussieBuilt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
