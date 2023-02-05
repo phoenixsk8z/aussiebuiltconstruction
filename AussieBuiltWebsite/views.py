@@ -35,7 +35,7 @@ def contact(request):
                 context = request.POST["context"]
                 me = 'aussiebuiltsender@gmail.com'
 
-                acceptableStates = ['virginia', 'north carolina']
+                acceptableStates = ['virginia', 'north carolina', 'va', 'nc']
 
                 if state.isalpha():
                     state = state.lower()
