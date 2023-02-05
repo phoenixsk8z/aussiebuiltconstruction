@@ -76,7 +76,7 @@ def contact(request):
         return HttpResponseRedirect(reverse("contact"))
 
     else: 
-        return render(request, "AussieBuilt/contact.html", captchaContext)
+        return render(request, "AussieBuilt/contact.html")
         
 def home(request):
     return render(request, "AussieBuilt/home.html")
