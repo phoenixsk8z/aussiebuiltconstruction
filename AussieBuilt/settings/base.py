@@ -34,7 +34,6 @@ EMAIL_USE_SSL = False
 
 # Application definition
 INSTALLED_APPS = [
-    'captcha',
     'AussieBuiltWebsite',
     'django.contrib.admin',
     'django.contrib.auth',

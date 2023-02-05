@@ -12,9 +12,6 @@ import os
 
 def contact(request):
     
-    captchaContext = {
-        "captcha": FormWithCaptcha,
-    }
     form = EmailForm()
     smtp_server = "smtp.gmail.com"
     port = 587 #Gmail TLS Port
@@ -29,7 +26,6 @@ def contact(request):
         form = EmailForm(request.POST)
         
         if form.is_valid():
-            print("here")
             try:
                 name = request.POST["name"]
                 receiver_email = request.POST["email"]
@@ -43,10 +39,8 @@ def contact(request):
                 acceptableStates = ['virginia', 'north carolina']
 
                 if state.isalpha():
-                    print("state is alpha")
                     state = state.lower()
                     if state in acceptableStates and len(context) == 0:
-                        print(state)
                         body = f"""
                         Name: {name} 
                         Email: {receiver_email}

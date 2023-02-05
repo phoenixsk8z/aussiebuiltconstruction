@@ -16,8 +16,3 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles'),
 ]
 
-GOOGLE_RECAPTCHA_SITE_KEY = os.environ.get("GOOGLE_RECAPTCHA_SITE_KEY")
-GOOGLE_RECAPTCHA_SECRET_KEY = os.environ.get('GOOGLE_RECAPTCHA_SECRET_KEY')
-GOOGLE_RECAPTCHA_REQUIRED_SCORE = 0.45
-
-SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']

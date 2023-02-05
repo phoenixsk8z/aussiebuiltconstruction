@@ -33,7 +33,6 @@
 
 <div id="contact-form-container">
     <form action="{% url 'contact' %}" method="POST" id="contact-form">
-    <!--<form action="https://formsubmit.co/phoenixocean193@gmail.com" method="POST" id="contact-form">-->
         {% csrf_token %}
         <input type="text" name="name" id="contact-input-name" class="contact-input contact-form-items" placeholder="Name" autocomplete="off" required>
         <input type="text" name="email" id="contact-input-email" class="contact-input contact-form-items" placeholder="Email" autocomplete="off" required>
