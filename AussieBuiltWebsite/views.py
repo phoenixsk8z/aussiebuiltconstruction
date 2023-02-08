@@ -26,6 +26,7 @@ def contact(request):
         
         if form.is_valid():
             try:
+                age = request.POST["age"]
                 name = request.POST["name"]
                 receiver_email = request.POST["email"]
                 phone = request.POST["phone"]
@@ -36,38 +37,39 @@ def contact(request):
                 me = 'aussiebuiltsender@gmail.com'
 
                 acceptableStates = ['virginia', 'north carolina', 'va', 'nc']
+                
+                if age == None:
+                    if state.isalpha():
+                        state = state.lower()
+                        if state in acceptableStates and len(context) == 0:
+                            body = f"""
+                            Name: {name} 
+                            Email: {receiver_email}
+                            Phone #: {phone}
+                            State: {state}
+                            Subject: {subject}
+                            Body: {message}
+                            """
 
-                if state.isalpha():
-                    state = state.lower()
-                    if state in acceptableStates and len(context) == 0:
-                        body = f"""
-                        Name: {name} 
-                        Email: {receiver_email}
-                        Phone #: {phone}
-                        State: {state}
-                        Subject: {subject}
-                        Body: {message}
-                        """
+                            customerThankYouMessage = f"Thanks for reaching out {name}, Aussie Built Construction will get back to you as soon as possible."
 
-                        customerThankYouMessage = f"Thanks for reaching out {name}, Aussie Built Construction will get back to you as soon as possible."
-
-                        defaultContext = ssl.create_default_context()
-                        Email = EmailMessage()
-
-                        Email['From'] = sender_email
-                        Email['To'] = receiver_email
-                        Email['Subject'] = subject
-                        Email.set_content(body)
-
-                        with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=defaultContext) as smtp:
-                            smtp.login(sender_email, sender_password)
-                            smtp.sendmail(sender_email, receiver_email, Email.as_string())
+                            defaultContext = ssl.create_default_context()
                             Email = EmailMessage()
+
                             Email['From'] = sender_email
                             Email['To'] = receiver_email
-                            Email['Subject'] = f"Aussie Built Construction - {subject}"
-                            Email.set_content(customerThankYouMessage)
-                            smtp.sendmail(sender_email, receiver_email, Email.as_string())
+                            Email['Subject'] = subject
+                            Email.set_content(body)
+
+                            with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=defaultContext) as smtp:
+                                smtp.login(sender_email, sender_password)
+                                smtp.sendmail(sender_email, receiver_email, Email.as_string())
+                                Email = EmailMessage()
+                                Email['From'] = sender_email
+                                Email['To'] = receiver_email
+                                Email['Subject'] = f"Aussie Built Construction - {subject}"
+                                Email.set_content(customerThankYouMessage)
+                                smtp.sendmail(sender_email, receiver_email, Email.as_string())
 
             except Exception as error:
                 # Print Any Error Messages :)

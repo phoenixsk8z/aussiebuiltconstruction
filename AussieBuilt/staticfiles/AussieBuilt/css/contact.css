@@ -44,7 +44,6 @@
     width: 90%;
     margin: 40px auto 10px;
     justify-content: space-evenly;
-    row-gap: 16px;
     padding: 18px 12px;
     background-color: #3500D3;
     border-radius: 6px;
@@ -72,6 +71,7 @@
     font-size: 30px;
     transition: background-color 0.45s linear, color 0.45s linear;
     font-family: Overpass;
+    margin-bottom: 0;
 }
 
 #contact-submit:hover {
@@ -89,6 +89,14 @@
     background-color: black;
     caret-color: white!important;
     color: white;
+    margin-bottom: 16px;
+}
+
+#contact-input-age {
+    z-index: -10;
+    border: 0;
+    margin: 0;
+    height: 0;
 }
 
 .contact-form-items:focus {

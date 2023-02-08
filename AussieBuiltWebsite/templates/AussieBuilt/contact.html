@@ -34,9 +34,10 @@
 <div id="contact-form-container">
     <form action="{% url 'contact' %}" method="POST" id="contact-form">
         {% csrf_token %}
-        <input type="text" name="name" id="contact-input-name" class="contact-input contact-form-items" placeholder="Name" autocomplete="off" required>
-        <input type="text" name="email" id="contact-input-email" class="contact-input contact-form-items" placeholder="Email" autocomplete="off" required>
-        <input type="text" name="phone" id="contact-input-phone" class="contact-input contact-form-items" placeholder="Phone #" autocomplete="off" required>
+        <input type="number" name="age" id="contact-input-age" class="contact-input" min="13" max="150">
+        <input type="text" name="name" id="contact-input-name" class="contact-input contact-form-items" placeholder="Name" autocomplete="off" max="128" required>
+        <input type="email" name="email" id="contact-input-email" class="contact-input contact-form-items" placeholder="Email" autocomplete="off" max="128" required>
+        <input type="tel" name="phone" id="contact-input-phone" class="contact-input contact-form-items" placeholder="Phone #" autocomplete="off" max="16" required>
         <input type="text" name="state" id="contact-input-state" class="contact-input contact-form-items" placeholder="State" autocomplete="off" required>
         <input type="text" name="subject" id="contact-input-subject" class="contact-input contact-form-items" placeholder="Subject" autocomplete="off" required>
         <textarea type="text" name="message" id="contact-message" placeholder="Message" class="contact-form-items" autocomplete="off" required></textarea>
