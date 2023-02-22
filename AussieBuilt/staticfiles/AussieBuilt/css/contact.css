@@ -21,13 +21,13 @@
     font-size: 28px;
     font-weight: 700;
     max-width: 1050px;
-    font-family: Overpass;
+    font-family: sans-serif;
 }
 
 .contact-info {
     display: inline-block;
     font-size: 28px;
-    font-family: Overpass;
+    font-family: sans-serif;
     white-space: nowrap;
 }
 
@@ -47,7 +47,7 @@
     padding: 18px 12px;
     background-color: #3500D3;
     border-radius: 6px;
-    font-family: Overpass;
+    font-family: sans-serif;
 }
 
 .contact-input {
@@ -55,7 +55,7 @@
     width: auto;
     font-size: 30px;
     padding: 0 8px;
-    font-family: Overpass;
+    font-family: sans-serif;
 }
 
 #contact-message {
@@ -63,14 +63,14 @@
     padding: 8px;
     font-size: 24px;
     resize: none;
-    font-family: Overpass;
+    font-family: sans-serif;
 }
 
 #contact-submit {
     padding: 12px 0;
     font-size: 30px;
     transition: background-color 0.45s linear, color 0.45s linear;
-    font-family: Overpass;
+    font-family: sans-serif;
     margin-bottom: 0;
 }
 
@@ -108,7 +108,7 @@ input::placeholder {
    color: white;
    font-size: 30px;
    font-weight: 700;
-   font-family: Overpass;
+   font-family: sans-serif;
    padding-top: 18px;
 }
 
@@ -116,7 +116,7 @@ textarea::placeholder {
     font-size: 30px;
     color: white;
     font-weight: 700;
-    font-family: Overpass;
+    font-family: sans-serif;
 }
 
 #contact-input-name::placeholder {
@@ -131,7 +131,7 @@ textarea::placeholder {
     cursor: url("../imgs/email-icon.png") 16 16, pointer;
     align-self: center;
     align-content: center;
-    font-family: Overpass;
+    font-family: sans-serif;
     white-space: nowrap;
 }
 
@@ -141,7 +141,7 @@ textarea::placeholder {
     /* SET HOVER CURSOR AS CLIPBOARD AND CHANGE X AND Y TO BE HALF OF THE IMAGE 
     SIZE SO THE CLIPBOARD ICON IS PLACED IN THE MIDDLE + SET FALL BACK OF POINTER */
     cursor: url("../imgs/phone-icon.png") 16 16, auto;
-    font-family: Overpass;
+    font-family: sans-serif;
     white-space: nowrap;
 }
 
