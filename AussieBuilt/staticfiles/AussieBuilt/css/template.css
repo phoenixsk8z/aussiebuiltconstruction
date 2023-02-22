@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: open-sans, sans-serif;
+    font-weight: 400;
 }
 
 html {
@@ -101,7 +102,7 @@ main {
 }
 
 .nav-header, .nav-links {
-    font-family: sans-serif;
+    font-family: open-sans, sans-serif;
     color: white;
 }
 
@@ -164,7 +165,7 @@ main {
     font-size: 22px;
     align-self: center;
     font-weight: 500;
-    font-family: sans-serif;
+    font-family: open-sans, sans-serif;
 }
 
 
@@ -184,7 +185,7 @@ main {
     font-size: 20px;
     width: 100%;
     height: 40px;
-    font-family: sans-serif;
+    font-family: open-sans, sans-serif;
     font-weight: 500;
     justify-items: center;
     align-items: center;
@@ -197,7 +198,7 @@ main {
     color: black;
     font-size: 20px;
     font-weight: 500;
-    font-family: sans-serif;
+    font-family: open-sans, sans-serif;
 }
 
 */
@@ -250,7 +251,7 @@ a {
     padding: 8px 6px 10px 24px;
     color: white;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: open-sans, sans-serif;
     /* SET HOVER CURSOR AS CLIPBOARD AND CHANGE X AND Y TO BE HALF OF THE IMAGE 
     SIZE SO THE CLIPBOARD ICON IS PLACED IN THE MIDDLE + SET FALL BACK OF POINTER */
     cursor: url("../imgs/email-icon.png") 16 16, pointer;
@@ -262,7 +263,7 @@ a {
     padding: 8px 24px 10px 6px;
     color: white;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: open-sans, sans-serif;
     /* SET HOVER CURSOR AS CLIPBOARD AND CHANGE X AND Y TO BE HALF OF THE IMAGE 
     SIZE SO THE CLIPBOARD ICON IS PLACED IN THE MIDDLE + SET FALL BACK OF POINTER */
     cursor: url("../imgs/phone-icon.png") 16 16, pointer;
@@ -274,7 +275,7 @@ a {
     color: white;
     font-size: 12px;
     justify-self: center;
-    font-family: sans-serif;
+    font-family: open-sans, sans-serif;
 }
 
 /* UNDER 1310PX CSS FOR NAV BAR */
