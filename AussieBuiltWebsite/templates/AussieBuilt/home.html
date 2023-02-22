@@ -1,7 +1,7 @@
 {% extends "AussieBuilt/layout.html" %}
 {% load static %}
 
-{% block title %}Hampton Roads Contractor{% endblock %}
+{% block title %}General Contractor Hampton Roads{% endblock %}
 
 {% block meta %}
 <meta name="description" content="Hampton Roads Class A General Contractor, Over 17 Years Of Experience, Quality Hampton Roads Bathroom, Kitchen & Deck Remodeling">
@@ -23,157 +23,37 @@
 
   <div id="home-page-header">
 
-    <!--
-    <div id="home-page-image-container">
-
-      <div class="home-page-imgs">
-        <img class="home-image" src="{% static 'AussieBuilt/imgs/kitchen-home.jpg' %}">
-      </div>
-
-      <div class="home-page-imgs">
-        <img class="home-image" id="home-image-bathroom" src="{% static 'AussieBuilt/imgs/bathroom-home.jpg' %}">
-      </div>
-
-    </div>
-    -->
-
     <div id="home-slideshow">
 
       <!-- LAST 2 IMAGES FROM MAIN IMAGES  (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
-      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/bathroom5-vanity-home.jpg' %}">
-      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/bathroom5-vertical-images-home.jpg' %}">
+      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/bathroom5-vertical-images-home.webp' %}">
+      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/kitchen-home.webp' %}">
       
       <!-- MAIN IMAGES (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
-      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/kitchen-home.jpg' %}">
-      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/bathroom-home.jpg' %}">
-      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/darkwood-kitchen-home.jpg' %}">
-      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/bathroom5-vanity-home.jpg' %}">
-      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/bathroom5-vertical-images-home.jpg' %}">
+      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/bathroom-home.webp' %}">
+      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/darkwood-kitchen-home.webp' %}">
+      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/bathroom5-vanity-home.webp' %}">
+      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/bathroom5-vertical-images-home.webp' %}">
+      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/kitchen-home.webp' %}">
 
       <!-- FIRST 2 IMAGES FROM MAIN IMAGES (2 VERTICAL IMAGES = 1 LANDSCAPE IMAGE) -->
-      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/kitchen-home.jpg' %}">
-      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/bathroom-home.jpg' %}">
-
-    </div>
-      
-    <div id="home-image-text-div">
-
-      <!-- 
-        <img id="home-image-logo" src="{% static 'AussieBuilt/imgs/home-page-images/aussiebuiltlogo.png' %}">
-      -->
-
-      <h1 id="home-image-header">
-        BUILDING YOUR VISION.
-        <span id="home-image-header-line-break"></span>
-        CREATING REALITY.
-      </h1>
+      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/bathroom-home.webp' %}">
+      <img class="slideshow-img" src="{% static 'AussieBuilt/imgs/home-page-images/darkwood-kitchen-home.webp' %}">
 
     </div>
 
+    <div id="home-image-text-container">
+
+      <div id="home-image-header">
+        <h2 class="home-slideshow-text">DESIGNING YOUR VISION.</h2><span id="home-image-header-line-break"></span><h2 class="home-slideshow-text"> </h2><h2 class="home-slideshow-text">CREATING REALITY.</h2>
+      </div>
+
+    </div>
 
   </div>
 
-  <!-- 
+  </div>
 
-  <div id="home-page-body">
-
-    <div id="bulletpoints-container">
-
-      <div class="bulletpoint">
-        <h1 class="bulletpoint-header">
-          Founded in 2004
-        </h1>
-
-        <p class="bullletpoint-text">
-
-        </p>
-      </div>
-
-      <div class="bulletpoint">
-        <h1 class="bulletpoint-header">
-
-        </h1>
-        <p class="bullletpoint-text">
-
-        </p>
-      </div>
-
-      <div class="bulletpoint">
-        <h1 class="bulletpoint-header">
-
-        </h1>
-        <p class="bullletpoint-text">
-
-        </p>
-      </div>
-
-      <div class="bulletpoint">
-        <h1 class="bulletpoint-header">
-
-        </h1>
-        <p class="bullletpoint-text">
-
-        </p>
-      </div>
-
-      <div class="bulletpoint">
-        <h1 class="bulletpoint-header">
-
-        </h1>
-        <p class="bullletpoint-text">
-
-        </p>
-      </div>
-
-      <div class="bulletpoint">
-        <h1 class="bulletpoint-header">
-
-        </h1>
-        <p class="bullletpoint-text">
-
-        </p>
-      </div>
-
-      <div class="bulletpoint">
-        <h1 class="bulletpoint-header">
-
-        </h1>
-        <p class="bullletpoint-text">
-
-        </p>
-      </div>
-
-      <div class="bulletpoint">
-        <h1 class="bulletpoint-header">
-
-        </h1>
-        <p class="bullletpoint-text">
-
-        </p>
-      </div>
-
-    </div>
-
-   
-
-    <h1>Quality Construction Serving Hampton Roads</h1>
-    <p class="home-page-body-text">Aussie Built Construction is residential Class A Contractor 
-      with over 17 years of experience.
-      
-      Specialities include Kitchen and Bathroom Renovations with a focus on interior remodelling. 
-      From complete custom kitchens/bathrooms to face lifts, we do it all!
-
-      Other services we offer include - Carpentry, Exterior Door replacement, 
-      Decks, Painting, Flooring and General Repairs.
-  
-      Serving the greater Hampton Roads area - Aussie Built construction
-      has been a trusted name for over 10 years.
-
-      With over 17 years of experience in the industry, we believe in honest,
-      ethical and reliable work. Built on referral based advertising, 
-      we let our work and customers speak for itself! 
-    </p>
-  --> 
   <div id="home-page-body">
 
     <div class="bulletpoint-container">
@@ -196,21 +76,6 @@
       <h1 class="bulletpoint-header">Contact</h1>
       <p class="bulletpoint-body">We would love to get in touch with you! If you have any questions or would like to schedule a free estimate, please contact us!</p>
     </div>
-
-
-    <!--
-    <div class="bulletpoint-container">
-      <h1 class="bulletpoint-header">Lorem ipsum</h1>
-      <p class="bulletpoint-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nisi repellat incidunt modi repudiandae fuga cupiditate facere nobis? 
-      Atque ea adipisci perferendis nesciunt quidem numquam rem! Labore placeat eaque eius.</p>
-    </div>
-
-    <div class="bulletpoint-container">
-      <h1 class="bulletpoint-header">Lorem, ipsum dolor.</h1>
-      <p class="bulletpoint-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-      Accusantium qui nam, nisi facilis ipsa nesciunt aliquam tenetur? Ducimus, nisi!</p>
-    </div>
-    -->
 
   </div>
 

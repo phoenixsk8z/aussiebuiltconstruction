@@ -296,7 +296,7 @@ a {
         align-self: center;
         justify-items: center;
         max-width: none;
-        grid-template-rows: 2px repeat(5, 50px) 2px;
+        grid-template-rows: 2px repeat(4, 50px) 2px;
         grid-template-columns: 1fr;
         height: 0;
         opacity: 0;
@@ -305,7 +305,7 @@ a {
     }
 
     #nav-links-container.active {
-        height: 254px; /* 2PX PER BORDER + 50PX PER NAV LINK ROW (SAME SIZE AS NAVLINK ROWS) */
+        height: 204px; /* 2PX PER BORDER + 50PX PER NAV LINK ROW (SAME SIZE AS NAVLINK ROWS) */
         opacity: 1;
     }
 
