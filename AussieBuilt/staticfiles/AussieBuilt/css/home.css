@@ -92,7 +92,7 @@
     grid-template-rows: 30px auto;
     margin: 12px 0;
     border-radius: 16px;
-    background-color: #3500D3;
+    background-color: #AB94FF;
 }
 
 .bulletpoint:nth-child(even) {
@@ -128,7 +128,7 @@
 }
 
 .bulletpoint-header {
-    color: #3500D3;
+    color: #AB94FF;
     font-size: 24px;
     font-family: 'Overpass';
     font-weight: 500;
