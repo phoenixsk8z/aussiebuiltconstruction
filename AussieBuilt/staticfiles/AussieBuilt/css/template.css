@@ -235,7 +235,7 @@ main {
 #email-phone-div {
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 20px;
+    column-gap: 12px;
     justify-items: center;
     align-items: center;
     align-content: center;
@@ -247,6 +247,7 @@ a {
 }
 
 #footer-email {
+    padding: 8px 6px 10px 24px;
     color: white;
     font-size: 16px;
     font-family: sans-serif;
@@ -258,6 +259,7 @@ a {
 }
 
 #footer-phone {
+    padding: 8px 24px 10px 6px;
     color: white;
     font-size: 16px;
     font-family: sans-serif;
@@ -397,14 +399,22 @@ a {
     #email-phone-div {
         padding-top: 4px;
         grid-template-columns: 100%;
-        grid-template-rows: repeat(2, 20px);
-        row-gap: 8px;
+        grid-template-rows: repeat(2, 24px);
         align-items: center;
+        row-gap: 12px;
     }
 
     #footer-copyright {
         width: 95%;
         text-align: center;
+    }
+
+    #footer-email {
+        padding: 12px 30px 6px 30px;
+    }
+    
+    #footer-phone {
+        padding: 6px 60px 8px 60px;
     }
 
 }
