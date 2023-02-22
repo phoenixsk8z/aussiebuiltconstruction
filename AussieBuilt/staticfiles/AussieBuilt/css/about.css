@@ -25,7 +25,7 @@
 
 .about-section-text {
     color: white;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 @media (max-width: 1045px) {
@@ -36,7 +36,7 @@
 
 @media (max-width: 845px) {
     .about-section-text {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .about-sections {
