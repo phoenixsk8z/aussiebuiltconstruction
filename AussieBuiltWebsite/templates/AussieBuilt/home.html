@@ -15,11 +15,13 @@
 
 {% block script %}
 <script src="{% static 'AussieBuilt/javascript/automaticSlideshow.js' %}" defer></script>
+<script id="currentPage" data-name="home" src="{% static 'AussieBuilt/javascript/underline.js' %}" defer></script>
 
 {% endblock %}
 
 
 {% block body %}
+<div class="current-page" id="home">home</div>
 <div id="home-page-wrapper">
 
   <div id="home-page-header">

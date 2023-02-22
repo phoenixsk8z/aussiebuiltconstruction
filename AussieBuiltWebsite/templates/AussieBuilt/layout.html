@@ -20,7 +20,7 @@
 
   <script src="{% static '/AussieBuilt/javascript/dropdownMenu.js' %}" defer></script>
   <script src="{% static '/AussieBuilt/javascript/copyToClipboard.js' %}" defer></script>
-  
+
   {% block script %}
   {% endblock %}
 
@@ -52,10 +52,14 @@
         <div id="nav-links-container">
           <span id="nav-sep"></span>
           <a class="nav-links" href="{% url 'home' %}">
-            <p class="nav-link-text">HOME</p>  
+            <div class="nav-links-text-underline-container">
+              <p class="nav-link-text">HOME</p>  
+            </div>
           </a>
           <a class="nav-links" href="{% url 'portfolio' %}">
-            <p class="nav-link-text">PORTFOLIO</p>
+            <div class="nav-links-text-underline-container">
+              <p class="nav-link-text">PORTFOLIO</p>
+            </div>
           </a>
           <!--
             <a class="nav-links" href="{% url 'partners' %}">
@@ -63,10 +67,14 @@
             </a>
           -->
           <a class="nav-links" href="{% url 'about' %}">
-            <p class="nav-link-text">ABOUT</p>
+            <div class="nav-links-text-underline-container">
+              <p class="nav-link-text">ABOUT</p>
+            </div>
           </a>
           <a class="nav-links" href="{% url 'contact' %}">
-            <p class="nav-link-text">CONTACT</p>
+            <div class="nav-links-text-underline-container">
+              <p class="nav-link-text">CONTACT</p>
+            </div>
           </a>
           
           <!-- 

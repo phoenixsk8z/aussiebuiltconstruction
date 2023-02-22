@@ -7,6 +7,10 @@
 <link rel="stylesheet" href="{% static 'AussieBuilt/css/portfolio.css' %}">
 {% endblock %}
 
+{% block script %}
+<script id="currentPage" data-name="portfolio" src="{% static 'AussieBuilt/javascript/underline.js' %}" defer></script> <!--DATA-NAME MUST EQUAL INNER HTML OF NAV LINK-->
+{% endblock %}
+
 {% block body %}
 <div id="image-container">
 
